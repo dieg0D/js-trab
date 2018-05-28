@@ -1,0 +1,91 @@
+    <!-- Diego Antônio Barbosa Cardoso - 16/0005116 -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Budget</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <link rel="icon" href="favicon.png">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="topster"> 
+            <img id ="mont" src="mont.jpg" alt="Essa é a montanha Ama Dablam, no Nepal, considerada uma das mais bonitas do mundo">
+        </div>
+        <div class="topo">
+            <h2 id="titulo">Avaliable Budget in May 2018</h2>
+            <h1 id="titulonum">0</h1> 
+        </div>
+        <div class="income">
+            <table>
+                <tr>
+                    <td>INCOME</td>
+                    <td id="in">+0.00</td>
+                </tr>
+            </table>
+        </div>
+            <div class="expenses">
+            <table>
+                <tr>
+                    <td>EXPENSES</td>
+                    <td id="ex">-0.00</td>
+                    <td id="pct">0%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="form-row align-items-center botoes">
+
+            <div class="col-auto">
+                <select class="custom-select mr-sm-2" id="+-">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select>   
+            </div>
+
+            <div class="col-auto">
+                <input type="text" class="form-control" id="description"  placeholder="Add description">
+            </div>
+
+            <div class="col-auto">
+                <input type="number" class="form-control" id="valor" placeholder="Value" >
+            </div>
+
+            <div class="col-auto">
+                <input type="submit" class="btn btn-primary" value="Submit" onclick="readValues();">
+            </div>
+        </div>
+        <div class="tabela">
+            <div>
+                <table class="table table-striped" id="inTabela">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="2" id="inctab" >INCOME</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="table table-striped" id="exTabela">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="3" id="exptab">EXPENSES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+    </html>
