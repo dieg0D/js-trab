@@ -65,7 +65,7 @@ function check() {
     }
     if(go == true){
         if(option == "+") {
-            income = income + valor
+            income = (income + valor)
             document.getElementById("in").innerHTML = "+" + income
             addLinhaIN()
         }
@@ -74,9 +74,9 @@ function check() {
                 pct = 0
             }
             else{
-                pct = ((100 * valor) / income)
+                pct = ((100 * valor) / income).toFixed(2)
             }
-            expenses = expenses + valor
+            expenses = (expenses + valor)
             document.getElementById("ex").innerHTML = "-" + expenses
             addLinhaEX()
         }
@@ -85,9 +85,9 @@ function check() {
         totalpct = 0
     }
     else{
-        totalpct = ((100 * (-1 * expenses)) / income)
+        totalpct = ((100 *  expenses) / income).toFixed(2)
     }
-    atual = income - expenses
+    atual = (income - expenses)
     document.getElementById("pct").innerHTML = totalpct + "%"
     if(atual > 0){
         document.getElementById("titulonum").innerHTML = "+" + atual
